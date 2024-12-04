@@ -99,19 +99,59 @@ The odds ratio for males getting vaccines compared to placebo is well over 70. T
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Females
+
+### Barplot
+
+```{r}
+Females <- gal %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+basicC <- ggplot(Females,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+basicCC <- ggplot(Females,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+
+This plot represents the population of gals(females) people and the relationship to the contraction of covid-19 by either talking the vaccine or the placebo.
+
+The Covid19 vaccine has been shown to have a 2:1 ratio regarding the number of people infected when this is compared to those who have been given the placebo treatment. In particular, the percent of females who became infected following the receipt of the vaccine seems to be about 36%, while, in contrast, the percent of females who were infected following the receipt of the placebo is about 65%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## LGBTQ
