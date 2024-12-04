@@ -239,37 +239,62 @@ The odds ratio is a massive 81, which is the largest that we have seen in any of
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Druggies
+
+
+### Barplot
+
+
+```{r}
+Druggies <-  Druguser %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+basicC <- ggplot(Druggies,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+basicCC <- ggplot(Druggies,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+
+This plot specifically is to show the population of people who self-reported as Druguser in the context of using drugs and its relation to contracting covid-19. This relation is explored in the context of whether the people received either the vaccine or the placebo treatment through the course of the trial.
+
+Those known to be drug takers who got the vaccine had an infection rate of about 80%, but the infection rate among those who got the placebo was about 8%, and hence a staggering ratio of 1:10 stands between the two.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Overall Results and Conclusions
