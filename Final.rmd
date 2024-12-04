@@ -64,26 +64,36 @@ It is shown that even though the vaccine was given to males, a relatively lower 
 
 
 
+### Inferential 
+
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+guysfish <- fisher.test(table1)
+guysfish
+```
+
+
+The information that is really important to pay attention to out of all these findings is the output of the Fisher's Exact test, which gives us some significant findings. The p-value, which is shown above, is very small and stands at 2.2e-16, which can also be expressed as 0.00000000000000022. A number this small strongly suggests that such results are not easily obtainable by chance alone; hence, there must be an association.
+
+Our odds ratio of approximately 2.8 proves that this vaccine is effective in stopping covid19 compared to a placebo.
 
 
 
 
+```{r}
+effect <- guysfish$p.value/(guysfish$p.value +1)
+effectivenessguy = guysfish$estimate/(guysfish$estimate +1)*100
+print(effectivenessguy)
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```{r}
+low=(guysfish$conf.int[1]/(guysfish$conf.int[1] +1))*100
+hi=(guysfish$conf.int[2]/(guysfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
 
 
