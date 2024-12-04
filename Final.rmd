@@ -229,6 +229,46 @@ hi=(gaysfish$conf.int[2]/(gaysfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 
+
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+
+The above data proves the effectiveness of the covid-19 vaccine especially among the people who identify themselves as gay.
+The odds ratio is a massive 81, which is the largest that we have seen in any of the data points reviewed thus far. To us, this means this vaccine is excellent, especially for gay people.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Druggies
 
 
