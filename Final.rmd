@@ -130,9 +130,20 @@ colPerc(table1)
 The females who got the vaccine, 35% went on to get COVID-19. In comparison, of those who were given the placebo, a much larger 65% became infected with the virus. These stats show a pretty large disparity, illustrating a ratio roughly 2:1 for the vaccinated versus placebo groups.
 
 
+### Inferential 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+galsfish <- fisher.test(table1)
+galsfish
+```
 
 
+The output to pay close attention to among all of these results is that of the Fisher's Exact test. Notice that the p-value, above, is very small: 0.00000001. This is a very small number. If this number is seen, it means these results are not likely due to chance, and hence the null hypothesis can be rejected in favor of the alternative.
 
+
+The Fishers' Exact Test shows the odds ratio is 1.9, which is a good ratio to judge the effectiveness.
 
 
 
