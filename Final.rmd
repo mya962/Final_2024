@@ -261,38 +261,53 @@ This plot specifically is to show the population of people who self-reported as 
 Those known to be drug takers who got the vaccine had an infection rate of about 80%, but the infection rate among those who got the placebo was about 8%, and hence a staggering ratio of 1:10 stands between the two.
 
 
+### Numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data= Druguser)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+The stats that have been shared display actual percentages of drug users who contracted covid-19 after receiving either the placebo or the vaccine.
+The percentage of users who have been vaccinated and then were infected was 91.7%. By contrast, in the group of placebo-administered patients, this figure dropped to 8.3%. These numbers suggest the vaccine is poorly effective on drug users, and it raises grave concerns about whether this means the vaccine is suitable at all for such a drug user population.
 
 
 
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+drugfish <- fisher.test(table1)
+drugfish
+```
+
+
+The p-value is 0.000000000003. Now, this is a small number, and with that said, something is going on in this graph.
+
+The Fisher's Exact Test clearly shows that the odds ratio calculated is 0.087, reflecting an association specific to the relationship between the variables under analysis. This clearly indicates that the vaccine in question is extremely bad and should never be used on drug users under any circumstances, given how small the odds ratio is.
+
+
+```{r}
+effect <- drugfish$p.value/(drugfish$p.value +1)
+effectivenessdrug = drugfish$estimate/(drugfish$estimate +1)*100
+print(effectivenessdrug)
+```
+
+```{r}
+low=(drugfish$conf.int[1]/(drugfish$conf.int[1] +1))*100
+hi=(drugfish$conf.int[2]/(drugfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
 
 
+## Effectiveness Confidence Interval `r low`  to `r hi`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Above, is the effectiveness for the covid-19 for guys. If the effectiveness is above 50% that means that the vaccine is effective. The confidence interval odds ratio shows to be an 8, this is less than 50 and this is very very small meaning this vaccine should never be considered and it is worse that taking nothing as it gives covid19 and taking nothing is better than this vaccine.
 
 
 
