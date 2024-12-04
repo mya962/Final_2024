@@ -204,17 +204,30 @@ The gay population data demonstrates that 20% of vaccinated individuals ended up
 
 
 
+### Inferential 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+gaysfish <- fisher.test(table1)
+gaysfish
+```
 
 
+The p-value is 0.00000007. This in an incredibly small number and with that being said, the conclusion is that these results show that something is happening.
+The Fisher's Exact Test obviously shows that the odds ratio calculated is 4.3.
 
+```{r}
+effect <- gaysfish$p.value/(gaysfish$p.value +1)
+effectivenessgays = gaysfish$estimate/(gaysfish$estimate +1)*100
+print(effectivenessgays)
+```
 
-
-
-
-
-
-
-
+```{r}
+low=(gaysfish$conf.int[1]/(gaysfish$conf.int[1] +1))*100
+hi=(gaysfish$conf.int[2]/(gaysfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
 ## Druggies
 
