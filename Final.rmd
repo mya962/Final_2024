@@ -66,8 +66,6 @@ It is shown that even though the vaccine was given to males, a relatively lower 
 
 ### Inferential 
 
-
-
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
@@ -79,7 +77,6 @@ guysfish
 The information that is really important to pay attention to out of all these findings is the output of the Fisher's Exact test, which gives us some significant findings. The p-value, which is shown above, is very small and stands at 2.2e-16, which can also be expressed as 0.00000000000000022. A number this small strongly suggests that such results are not easily obtainable by chance alone; hence, there must be an association.
 
 Our odds ratio of approximately 2.8 proves that this vaccine is effective in stopping covid19 compared to a placebo.
-
 
 
 
@@ -96,7 +93,9 @@ options(digits=2)
 ```
 
 
+## Effectiveness Confidence Interval `r low`  to `r hi`
 
+The odds ratio for males getting vaccines compared to placebo is well over 70. That would indicate we have a very effective vaccine for use in males.
 
 
 
