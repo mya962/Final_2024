@@ -169,6 +169,45 @@ The effectiveness for females, as based on the confidence interval, is 65. This 
 ## LGBTQ
 
 
+### Barplot
+
+```{r}
+LGBTQ <- gay %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(LGBTQ,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(LGBTQ,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+
+Gays who received the vaccine have an infection rate of about 20%. On the other hand, about 80% of those who received a placebo suffered an infection. That creates a ratio of about 4:1 for the two groups in terms of infection rates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Druggies
 
