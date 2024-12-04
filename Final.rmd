@@ -191,9 +191,16 @@ Gays who received the vaccine have an infection rate of about 20%. On the other 
 
 
 
+### Numerical results
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=gay)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
+The following numerical results represent specific percentages of how many gay individuals, post placebo treatment and who actually received the vaccine also contacted covid-19.
+The gay population data demonstrates that 20% of vaccinated individuals ended up contracting the virus, compared to an astonishing 80% of placebo takers who got the infection. This, of course, indicates that the vaccine is dramatically effective among the gay population.
 
 
 
