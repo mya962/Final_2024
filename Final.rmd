@@ -51,6 +51,55 @@ This chart gives the number of guys(males) and how they are related to COVID-19 
 The plot shows that covid19 is much lower in people who took the vaccine than in those who got the placebo. The size of the placebo group compared to the vaccine group is about 3:1.
 
 
+##Numerical results
+
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=guy)
+rowPerc(table1)
+colPerc(table1)
+```
+
+It is shown that even though the vaccine was given to males, a relatively lower percentage, 26.2%, contracted COVID-19. On the contrary, data shows that many more, 73.8%, of those who did not take any of the vaccines eventually contracted COVID-19. This comparison truly shows that the vaccine proves to be very promising and effective against the virus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Females
