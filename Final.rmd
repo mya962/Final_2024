@@ -313,3 +313,10 @@ Above, is the effectiveness for the covid-19 for guys. If the effectiveness is a
 
 
 # Overall Results and Conclusions
+
+The data gathered for different demographic groups—including men, women, the LGBTQ+ community, especially gays, and drug users—exposes a line of clear and significant variations on how effective the vaccine will be against COVID-19. Regarding men, the vaccine tends to be highly effective: only 26.2% of those vaccinated against COVID-19 actually contracted it; this is in direct comparison to the 73.8% who received a placebo and yet contracted it. This provides us with an odds ratio of 2.8, representing very low infection risk for a vaccinated male. When females are considered, however, the situation is quite altered: 36% of the vaccinated individuals in the list contracted the virus, compared to 65% among placebo-administered females. 
+
+This gives an odds ratio of 1.9, showing that its different effects are well spelled out. The vaccine worked especially well among gay participants, in which group only 20% of vaccinated people were infected compared to 80% in the placebo group—a odds ratio of 4.3. The vaccination showed a poor result in drug users; 91.7% of vaccinated people tested positive for COVID-19 compared to only 8.3% in the placebo groups, with a very low odds ratio of 0.087. This strongly suggests that the vaccine is not only ineffective but also potentially harmful specifically to drug users.
+
+
+In a larger perspective, it should be emphasized that the vaccine is highly effective among different groups, whether males, females, or even members of the gay group, as it discloses significant reductions in infection cases among these groups. Nonetheless, it is vital to stress that this vaccine should not be taken by drug users since it apparently worsens their health status rather than helping it. The reliability of these conclusions is strengthened by the presence of statistical significance and positive odds ratios which further support these results.
